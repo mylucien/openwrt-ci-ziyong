@@ -103,6 +103,9 @@ jobs:
         rm -rf feeds/luci/applications/luci-app-daed
         rm -rf feeds/packages/net/daed
         mv feeds/passwall/luci-app-passwall feeds/luci/applications/
+        git clone --depth=1 https://github.com/chenmozhijin/luci-app-socat diy/luci-app-socat
+        cp -Rf diy/luci-app-socat/luci-app-socat package/luci-app-socat
+        rm -rf diy/luci-app-socat
         ./scripts/feeds install -a
 
     - name: Load Custom Configuration(加载自定义配置)
