@@ -94,6 +94,7 @@ jobs:
       run: |
         cd $OPENWRT_PATH
         ./scripts/feeds update -a
+        git clone --depth 1 https://github.com/mylucien/luci-app-davfs2 package/luci-app-davfs2
         git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall.git feeds/passwall
         git clone --depth 1 https://github.com/breeze303/luci-app-lucky package/lucky
         git clone --depth 1 https://github.com/QiuSimons/luci-app-daed.git package/daed
